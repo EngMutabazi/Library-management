@@ -28,6 +28,8 @@ class Library:
         self.books.append(book)
         self.number_of_books +=1
         self.available_books +=1
+        print(self.number_of_books)
+
     def remove_books(self,book):
         if book in self.books:
             self.books.remove(book)
@@ -56,11 +58,12 @@ booksLibrary = Library()
 book1 = LibraryBook("mps", "Anna Cruz", 2017, "9491957662")
 book2 = LibraryBook("Big data analystics", "Jacky jonson", 2013, "7449355730")
 book3 = LibraryBook("Python", "Mosh Hamid", 2015, "0491946008")
-book3 = LibraryBook("Python", "Mosh Hamid", 2015, "0491946008")
-book4 = LibraryBook("java", "Mosh Hamid", 2015, "0491946008")
+book4 = LibraryBook("Pythoni", "Mohamed Jackob", 2015, "0491946008")
 booksLibrary.add_book(book1)
 booksLibrary.add_book(book2)
 booksLibrary.add_book(book3)
+booksLibrary.add_book(book4)
+
 
 # remove books
 # print(booksLibrary.remove_books(book3))
@@ -75,7 +78,4 @@ print("Search results:")
 for book in results:
     print(book)
 
-
-
-
-
+# print(booksLibrary.num_book())
