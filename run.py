@@ -50,18 +50,24 @@ class Library:
     def checkin_book(self, book):
         book.check_in()
         self.number_of_books+=1
+        
 # create class objects
 booksLibrary = Library()
 book1 = LibraryBook("mps", "Anna Cruz", 2017, "9491957662")
 book2 = LibraryBook("Big data analystics", "Jacky jonson", 2013, "7449355730")
 book3 = LibraryBook("Python", "Mosh Hamid", 2015, "0491946008")
-
+book3 = LibraryBook("Python", "Mosh Hamid", 2015, "0491946008")
+book4 = LibraryBook("java", "Mosh Hamid", 2015, "0491946008")
 booksLibrary.add_book(book1)
 booksLibrary.add_book(book2)
 booksLibrary.add_book(book3)
 
 # remove books
-print(booksLibrary.remove_books(book3))
+# print(booksLibrary.remove_books(book3))
+
+print("List of Books:")
+print(" ")
+print(booksLibrary.display_books())
 
 # Search for books with the search term "Python" and print the results.
 results = booksLibrary.search_book("Python")
@@ -69,12 +75,6 @@ print("Search results:")
 for book in results:
     print(book)
 
-print("List of Books:")
-print(" ")
-print(booksLibrary.display_books()) 
-print(" ")
-
-print(booksLibrary.checkout_book(book1))
 
 
 
